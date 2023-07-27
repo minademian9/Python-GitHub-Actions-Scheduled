@@ -28,10 +28,10 @@ jobs:
           SOME_SECRET: ${{ secrets.SOME_SECRET }}
         run: python main.py
           
-      - name: commit files to main branch
+      - name: commit files
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          git config --local user.email "minademian9@gmail.com"
+          git config --local user.name "Mina Demian"
           git add -A
           git diff-index --quiet HEAD || (git commit -a -m "updated logs" --allow-empty)
           git push
