@@ -34,4 +34,4 @@ if __name__ == "__main__":
         humidity = data["forecast"]["humidity"]
         feels_like = data["forecast"]["feels_like"]
         
-        logger.info(f'Weather in Cairo: {temperature} with {humidity} and it feels like {feels_like}')
+        logger.info(f'Weather in Cairo: {temperature} with {humidity} % humidity & it feels like {feels_like}')
