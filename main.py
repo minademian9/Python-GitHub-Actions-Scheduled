@@ -27,8 +27,11 @@ except KeyError:
 if __name__ == "__main__":
     logger.info(f"Token value: {SOME_SECRET}")
 
-    r = requests.get('https://weather.talkpython.fm/api/weather/?city=Berlin&country=DE')
+    r = requests.get('https://weather.talkpython.fm/api/weather/?city=Cairo&country=EG')
     if r.status_code == 200:
         data = r.json()
         temperature = data["forecast"]["temp"]
-        logger.info(f'Weather in Berlin: {temperature}')
+        humidity = data["forecast"]["humidity"]
+        feels_like = data["forecast"]["feels_like"]
+        
+        logger.info(f'Weather in Cairo: {temperature} with {humidity} and it feels like {feels_like}')
