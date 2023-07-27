@@ -5,9 +5,9 @@ on:
   schedule:
     - cron: '0 0 * * 1' # At 00:00 on Monday
     
-env:
-  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
+# env:
+#   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -29,7 +29,7 @@ jobs:
       - name: execute py script # run main.py
         env:
           SOME_SECRET: ${{ secrets.SOME_SECRET }}
-        run: python main.py
+        run: python get_weather_api_caller.py
           
       - name: commit files to main branch
         run: |
