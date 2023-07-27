@@ -31,15 +31,16 @@ jobs:
           SOME_SECRET: ${{ secrets.SOME_SECRET }}
         run: python main.py
           
-      - name: commit files
+      - name: commit files to main branch
         run: |
           git config --local user.email "actions@github.com"
-          git config --local user.name "GitHub Actions"
-          git remote set-url --push origin https://minademian9:$GITHUB_TOKEN@github.com/minademian9/Python-GitHub-Actions-Scheduled
+          git config --local user.name "GitHub Actions" 
           git add -A
           git commit -am "Updated Logs"
           git push
-          
+
+# git remote set-url --push origin https://minademian9:$GITHUB_TOKEN@github.com/minademian9/Python-GitHub-Actions-Scheduled
+
 #       - name: push changes
 #         uses: ad-m/github-push-action@master
 #         with:
