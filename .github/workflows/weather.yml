@@ -2,8 +2,8 @@ name: Get Cairo Weather
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '0 0 * * 1' # At 00:00 on Monday
+  # schedule:
+    # - cron: '0 0 * * 1' # At 00:00 on Monday
     
 # env:
 #   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
